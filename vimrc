@@ -73,8 +73,8 @@ highlight ColorColumn ctermbg=236 ctermfg=red
 
 highlight Comment ctermfg=green
 
-highlight Pmenu ctermfg=black ctermbg=white
-highlight PmenuSel ctermfg=yellow ctermbg=black
+highlight Pmenu ctermbg=gray ctermfg=black guibg=gray guifg=black
+highlight PmenuSel ctermbg=red ctermfg=black guibg=red guifg=black
 
 highlight CustomColorTodo ctermbg=green ctermfg=black guibg=#BFFF00 guifg=#000000
 highlight CustomColorError ctermbg=red  ctermfg=black guibg=#FF0000 guifg=#000000
