@@ -222,6 +222,7 @@ if has("syntax")
   syntax on
 end
 
+" Set Section
 filetype plugin indent on
 
 set autoindent
@@ -313,7 +314,7 @@ augroup format_options
   autocmd BufEnter * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 augroup END
 
-" Color Set
+" Color Section
 set t_Co=256
 
 let g:gruvbox_termcolors=256
@@ -377,7 +378,7 @@ autocmd BufRead,BufNewFile Xresources,Xdefaults,xresources,xdefaults set filetyp
 autocmd BufWritePost Xresources,Xdefaults,xresources,xdefaults !xrdb %
 autocmd BufWritePost ~/.local/src/dwmblocks/config.h !cd ~/.local/src/dwmblocks/; sudo make install && { killall -q dwmblocks;setsid -f dwmblocks }
 
-"Key Mapping
+"Key Mapping Section
 let mapleader=" "
 
 nnoremap <SPACE> <Nop>
@@ -509,6 +510,7 @@ nnoremap <silent> <F7> :call ToggleQuickFix()<CR>
 nnoremap <silent> <F8> :CocList outline<cr>
 nnoremap <silent> <F12> :IndentGuidesToggle<CR>:set list!<CR>:ToggleWhitespace<CR>
 
+" Function Section
 function! ToggleQuickFix()
   if empty(filter(getwininfo(), 'v:val.quickfix'))
     CocDiagnostics 5
