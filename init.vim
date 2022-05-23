@@ -256,8 +256,8 @@ set scrolloff=8
 
 set wildmenu
 
-set noshowcmd
-set noshowmode
+set showcmd
+set showmode
 
 set number
 set relativenumber
