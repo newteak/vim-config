@@ -314,6 +314,9 @@ augroup format_options
   autocmd BufEnter * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 augroup END
 
+" Save file as sudo on files that require root permission
+cnoremap w!! execute 'silent! write !sudo tee % >/dev/null' <bar> edit!
+
 " Color Section
 set t_Co=256
 
