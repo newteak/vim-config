@@ -12,7 +12,6 @@ call plug#begin(system('echo -n "${XDG_CONFIG_HOME:-$HOME/.config}/nvim/plugged"
   Plug 'tommcdo/vim-lion'
 
   " Quick Move
-  Plug 'airblade/vim-gitgutter'
   Plug 'easymotion/vim-easymotion'
   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
   Plug 'junegunn/fzf.vim'
@@ -72,10 +71,6 @@ function! InstallCocSnipPlugins()
   CocInstall coc-lists
   CocInstall coc-snippets
 endfunction
-
-" plugin name: vim-gitgutter
-let g:gitgutter_map_keys=0
-let g:gitgutter_set_sign_backgrounds=0
 
 " plugin name: easymotion
 let g:EasyMotion_do_mapping=0
