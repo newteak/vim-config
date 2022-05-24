@@ -7,9 +7,8 @@ call plug#begin(system('echo -n "${XDG_CONFIG_HOME:-$HOME/.config}/nvim/plugged"
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
   " Write
-  Plug 'jiangmiao/auto-pairs'
-  Plug 'preservim/nerdcommenter'
   Plug 'sbdchd/neoformat'
+  Plug 'tpope/vim-commentary'
   Plug 'tommcdo/vim-lion'
   Plug 'tpope/vim-repeat'
   Plug 'tpope/vim-speeddating'
@@ -20,9 +19,6 @@ call plug#begin(system('echo -n "${XDG_CONFIG_HOME:-$HOME/.config}/nvim/plugged"
   Plug 'junegunn/fzf.vim'
   Plug 'mattesgroeger/vim-bookmarks'
   Plug 'easymotion/vim-easymotion'
-
-  " Git
-  Plug 'APZelos/blamer.nvim'
   Plug 'airblade/vim-gitgutter'
 
   " Utils
@@ -64,12 +60,6 @@ function! UnInstallCocPlugins()
   CocUninstall coc-pyright
 endfunction
 
-" plugin name: nerdcommenter
-let g:NERDCreateDefaultMappings=0
-let g:NERDDefaultAlign='left'
-let g:NERDSpaceDelims=1
-let g:NERDCommentEmptyLines=1
-
 " plugin name: easymotion
 let g:EasyMotion_do_mapping=0
 let g:EasyMotion_smartcase=1
@@ -103,14 +93,6 @@ let g:bookmark_auto_save_file=$HOME ."/.cache/nvim/.vim-bookmarks"
 " plugin name: vim-gutter
 let g:gitgutter_map_keys=0
 let g:gitgutter_set_sign_backgrounds=0
-
-" plugin name: blamer
-let g:blamer_enabled = 1
-let g:blamer_delay = 100
-let g:blamer_show_in_visual_modes = 0
-let g:blamer_show_in_insert_modes = 0
-let g:blamer_date_format = '%y/%m/%d %H:%M'
-let g:blamer_prefix = ' > '
 
 " plugin name: vim-highlightedyank
 let g:highlightedyank_highlight_duration=150
@@ -579,12 +561,6 @@ nnoremap <silent> <leader>, :e $XDG_CONFIG_HOME/nvim/init.vim<CR>
 " Code Drag
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
-
-" Comment
-nmap <silent> <leader>cc <Plug>NERDCommenterComment
-vmap <silent> <leader>cc <Plug>NERDCommenterComment
-nmap <silent> <leader>c<space> <Plug>NERDCommenterToggle
-vmap <silent> <leader>c<space> <Plug>NERDCommenterToggle
 
 " Bookmarks
 nmap <silent> <leader>ma <Plug>BookmarkShowAll
