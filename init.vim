@@ -50,26 +50,13 @@ endif
 
 " plugin name: coc
 function! InstallCocPlugins()
-  CocInstall coc-java
-  CocInstall coc-html
-  CocInstall coc-vetur
-  CocInstall coc-tsserver
   CocInstall coc-lists
   CocInstall coc-snippets
 endfunction
 
 function! UnInstallCocPlugins()
-  CocUninstall coc-java
-  CocUninstall coc-html
-  CocUninstall coc-vetur
-  CocUninstall coc-tsserver
   CocUninstall coc-lists
   CocUninstall coc-snippets
-endfunction
-
-function! InstallCocSnipPlugins()
-  CocInstall coc-lists
-  CocInstall coc-snippets
 endfunction
 
 " plugin name: easymotion
@@ -332,8 +319,6 @@ highlight CursorLine cterm=NONE ctermbg=235 guibg=#3c3839
 
 highlight Comment ctermfg=green
 
-highlight CocUnusedHighlight ctermbg=red ctermfg=black
-
 highlight GitGutterAdd    ctermfg=2 guifg=#00ff00
 highlight GitGutterChange ctermfg=3 guifg=#ffff00
 highlight GitGutterDelete ctermfg=1 guifg=#ff0000
@@ -382,11 +367,6 @@ let mapleader=" "
 nnoremap <SPACE> <Nop>
 
 nnoremap <silent> <leader><ENTER> :Marks<CR>
-
-" When I press double space, I press as hard as possible. That make my boss think
-" I'm a good programmer.
-nnoremap <leader><SPACE> :CocAction<CR>
-inoremap <silent><expr> <c-space> coc#refresh()
 
 nnoremap <silent> Q <nop>
 
@@ -445,11 +425,6 @@ nmap <silent> s. <Plug>(easymotion-repeat)
 vmap <silent> s. <Plug>(easymotion-repeat)
 
 " "g" is vim's goto func.
-nnoremap <silent> gc <Plug>(coc-declaration)
-nnoremap <silent> gd <Plug>(coc-definition)
-nnoremap <silent> gi <Plug>(coc-implementation)
-nnoremap <silent> gr <Plug>(coc-references)
-nnoremap <silent> gy <Plug>(coc-type-definition)
 nnoremap <silent> g[ :GitGutterPrevHunk<CR>
 nnoremap <silent> g] :GitGutterNextHunk<CR>
 
