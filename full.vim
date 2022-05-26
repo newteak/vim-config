@@ -68,7 +68,7 @@ let g:EasyMotion_smartcase=1
 let NERDTreeQuitOnOpen=1
 
 " plugin name: ultisnips
-let g:UltiSnipsExpandTrigger="<C-y>"
+let g:UltiSnipsExpandTrigger="<Nop>"
 let g:UltiSnipsJumpForwardTrigger='<TAB>'
 let g:UltiSnipsJumpBackwardTrigger='<S-TAB>'
 let g:coc_snippet_next='<TAB>'

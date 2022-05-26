@@ -31,7 +31,7 @@ call plug#begin(system('echo -n "${XDG_CONFIG_HOME:-$HOME/.config}/nvim/plugged"
 call plug#end()
 
 " plugin name: ultisnips
-let g:UltiSnipsExpandTrigger="<C-y>"
+let g:UltiSnipsExpandTrigger="<Nop>"
 let g:UltiSnipsJumpForwardTrigger='<TAB>'
 let g:UltiSnipsJumpBackwardTrigger='<S-TAB>'
 let g:coc_snippet_next='<TAB>'
